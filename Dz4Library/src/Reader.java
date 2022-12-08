@@ -21,10 +21,10 @@ public class Reader {
         System.out.println("Нет места для новой книги!");
     }
 
-    public Book returnBook(String bookName) {
+    public Book returnBook(String nameBook) {
         Book ret = null;    //если у читателя есть книга bookName - вернем ее из метода
         for (int i = 0; i < books.length; i++) {
-            if (books[i] != null && books[i].getNameBook().equals(bookName)) {  //сначала проверяем books[i] != null, чтобы не было ошибки
+            if (books[i] != null && books[i].getNameBook().equals(nameBook)) {  //сначала проверяем books[i] != null, чтобы не было ошибки
                 ret = books[i];
                 for (int j = i; j < books.length - 1; j++) {
                     books[j] = books[j + 1];
@@ -35,7 +35,7 @@ public class Reader {
         if (ret == null) {  //если книгу не нашли
             System.out.println(getFIO() + " не хранит такую книгу.");
         } else {
-            System.out.println(getFIO() + " вернул книгу " + bookName + ".");
+            System.out.println(getFIO() + " вернул книгу " + nameBook + ".");
         }
         return ret;
     }
