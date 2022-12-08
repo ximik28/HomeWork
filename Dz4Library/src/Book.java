@@ -4,8 +4,8 @@ public class Book {
     private String text;
 
     public Book(){}
-    public Book(String name, String authorName, String text){
-        this.nameBook = name;
+    public Book(String nameBook, String authorName, String text){
+        this.nameBook = nameBook;
         this.authorName = authorName;
         this.text = text;
     }
